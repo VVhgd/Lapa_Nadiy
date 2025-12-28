@@ -1,0 +1,85 @@
+/* ЗАГАЛЬНІ СТИЛІ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fff;
+  color: #1f2937;
+
+    font-family: 'Kurale', serif;
+}
+
+
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Логотип зліва, меню справа */
+  padding: 15px 40px; /* Більше “дихання” */
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f3f0f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Легка тінь */
+}
+
+/* LOGO */
+header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+}
+
+/* MENU */
+.header {
+  display: contents;
+  align-items: center;
+  gap: 75px; /* Відстань між пунктами меню */
+}
+
+/* MENU ITEMS */
+.header h1 {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header h1:hover {
+  color: #2f8f7a;
+  transform: translateY(-2px); /* Легка анімація при наведенні */
+}
+
+/* EN BUTTON */
+.header h1:last-child {
+  padding: 6px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Легка тінь кнопки */
+}
+
+.header h1:last-child:hover {
+  background-color: #2f8f7a;
+  color: #fff;
+  border-color: #2f8f7a;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+  
+  .div1 { grid-area: 1 / 1 / 3 / 3; }
+  .div2 { grid-area: 3 / 1 / 4 / 6; }
+  .div3 { grid-area: 4 / 1 / 6 / 6; }
+  .div4 { grid-area: 4 / 2 / 5 / 5; }
+  .div5 { grid-area: 5 / 5 / 6 / 6; }
