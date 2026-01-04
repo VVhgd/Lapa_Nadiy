@@ -1,0 +1,70 @@
+/* Кущі під каруселлю */
+.bushes {
+    height: 80px;
+    background: #4f7f6a;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+  }
+  
+  /* Карусель */
+  .carousel {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  .carousel-inner {
+    height: 100%;
+    position: relative;
+  }
+  
+  .item {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .item.active {
+    opacity: 1;
+  }
+  
+  /* Слайди */
+  .item:nth-child(1) {
+    background-image: url(/img/Carousel1.jpg);
+    height: 500px;
+  }
+  
+  .item:nth-child(2) {
+    background-image: url(/img/Carousel2.jpg);
+    height: 500px;
+  }
+  
+  .item:nth-child(3) {
+    background-image: url(/img/Carousel3.jpg);
+    height: 500px;
+  }
+  
+  /* Контролі */
+  .control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    user-select: none;
+    z-index: 2;
+  }
+  
+  .control.left {
+    left: 20px;
+  }
+  
+  .control.right {
+    right: 20px;
+  }
+  

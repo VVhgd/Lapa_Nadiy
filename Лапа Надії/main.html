@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лапа Надії</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Лапа Надії</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kurale&family=Lobster&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/carousel.css" />
 </head>
 <body>
-    <header>
-        <img src="img/Лого.png" alt="Лапа Надії">
-        <div class="header">
-            <h1>Новини</h1>
-            <h1>Контакти</h1>
-            <h1>Усиновити</h1>
-            <h1>EN</h1>   
-        </div>
-    </header>
+
+<header>
+  <img src="img/Logo.jpeg" alt="Лапа Надії" />
+
+  <nav class="menu">
+    <h1>Новини</h1>
+    <h1>Контакти</h1>
+    <h1>Усиновити</h1>
+    <h1>Кошик</h1>
+    <h1 class="lang">EN</h1>
+  </nav>
+</header>
+
+<main class="parent">
+  <div class="div1">
+    <h1>Що нового у притулку?</h1>
+  </div>
+
+  <div class="div2">
+    <img src="img/Лапи.png" alt="Лапи" />
+  </div>
+
+  <div class="div3"></div>
+  <div class="div4"><p></p></div>
+
+  <div class="div5">
+    <img src="img/Clever.avif" alt="Листочок" />
+  </div>
+</main>
+
+<!-- 🌿 Кущі під каруселлю -->
+<div class="bushes"></div>
+
+<!-- 🎠 Карусель -->
+<div id="carousel" class="carousel">
+  <div class="carousel-inner">
+    <div class="item active"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+
+  <button class="control left">&#10094;</button>
+  <button class="control right">&#10095;</button>
+</div>
+
+<script src="js/carousel.js"></script>
+
 </body>
 </html>
