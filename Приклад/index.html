@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Притулок для безпритульних тварин. Усиновіть собаку або кішку, допоможіть знайти дім чотирилапому другу." />
+  <title>Лапа Надії - Притулок для тварин</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Змінено шрифти на більш професійні -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/carousel.css" />
+</head>
+<body>
+
+<header id="mainHeader" class="header">
+  <div class="header-content">
+    <div class="logo-section">
+      <img src="img/Logo.jpeg" alt="Лапа Надії Логотип" class="logo-img" />
+      <div class="logo-text-wrapper">
+        <span class="logo-text" data-uk="Лапа Надії" data-en="Paw of Hope">Лапа Надії</span>
+        <span class="logo-tagline" data-uk="Допомагаємо знайти дім" data-en="Helping find homes">Допомагаємо знайти дім</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <!-- Оновлено навігацію з посиланнями на нові сторінки -->
+      <a href="index.html" class="menu-item" data-uk="Головна" data-en="Home">Головна</a>
+      <a href="catalog.html" class="menu-item" data-uk="Каталог" data-en="Catalog">Каталог</a>
+      <a href="dogs.html" class="menu-item" data-uk="Собаки" data-en="Dogs">Собаки</a>
+      <a href="cats.html" class="menu-item" data-uk="Коти" data-en="Cats">Коти</a>
+      <a href="help.html" class="menu-item" data-uk="Допомогти" data-en="Help">Допомогти</a>
+      <a href="cart.html" class="cart-icon" aria-label="Кошик">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="lang-btn" id="langToggle">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main class="main-content">
+  <!-- Перероблено hero секцію для більш природного вигляду -->
+  <section class="hero-section">
+    <div class="hero-text">
+      <span class="hero-badge" data-uk="Нові надходження" data-en="New arrivals">Нові надходження</span>
+      <h1 class="hero-title" data-uk="Кожна тварина заслуговує на любов і затишний дім" data-en="Every animal deserves love and a cozy home">
+        Кожна тварина заслуговує на любов і затишний дім
+      </h1>
+      <p class="hero-subtitle" data-uk="У нашому притулку понад 75 собак і кішок чекають на зустріч із вами. Станьте частиною їхньої історії." data-en="Over 75 dogs and cats are waiting to meet you at our shelter. Become part of their story.">
+        У нашому притулку понад 75 собак і кішок чекають на зустріч із вами. Станьте частиною їхньої історії.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" data-uk="Переглянути тварин" data-en="View animals">Переглянути тварин</button>
+        <button class="btn-secondary" data-uk="Як допомогти" data-en="How to help">Як допомогти</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">752</span>
+          <span class="stat-label" data-uk="Влаштовані" data-en="Adopted">Влаштовані</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">28</span>
+          <span class="stat-label" data-uk="Волонтерів" data-en="Volunteers">Волонтерів</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span class="stat-label" data-uk="Років роботи" data-en="Years active">Років роботи</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-image">
+      <div class="image-wrapper">
+        <img src="img/Лапи.png" alt="Лапки домашніх улюбленців" />
+        <div class="image-badge">
+          <span class="badge-icon">🐾</span>
+          <div class="badge-text">
+            <span class="badge-number" data-uk="48 тварин" data-en="48 animals">48 тварин</span>
+            <span class="badge-desc" data-uk="чекають сім'ю" data-en="waiting for family">чекають сім'ю</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Додано секцію з реалістичним контентом -->
+  <section class="features-section">
+    <div class="section-header">
+      <h2 class="section-title" data-uk="Чому обирають нас" data-en="Why choose us">Чому обирають нас</h2>
+      <p class="section-subtitle" data-uk="Ми дбаємо про кожну тварину і допомагаємо їм знайти люблячу родину" data-en="We care for every animal and help them find a loving family">
+        Ми дбаємо про кожну тварину і допомагаємо їм знайти люблячу родину
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </div>
+        <h3 class="feature-title" data-uk="Професійний догляд" data-en="Professional care">Професійний догляд</h3>
+        <p class="feature-desc" data-uk="Ветеринарний нагляд 24/7, якісне харчування та комфортні умови проживання" data-en="24/7 veterinary supervision, quality food and comfortable living conditions">
+          Ветеринарний нагляд 24/7, якісне харчування та комфортні умови проживання
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h3 class="feature-title" data-uk="Підтримка після усиновлення" data-en="Post-adoption support">Підтримка після усиновлення</h3>
+        <p class="feature-desc" data-uk="Консультації та допомога на всіх етапах адаптації вашого нового друга" data-en="Consultation and assistance at all stages of your new friend's adaptation">
+          Консультації та допомога на всіх етапах адаптації вашого нового друга
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h3 class="feature-title" data-uk="Прозора робота" data-en="Transparent work">Прозора робота</h3>
+        <p class="feature-desc" data-uk="Повна інформація про тварин, їхню історію та стан здоров'я" data-en="Complete information about animals, their history and health condition">
+          Повна інформація про тварин, їхню історію та стан здоров'я
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Додано секцію з категоріями тварин -->
+  <section class="animals-section" id="adopt">
+    <div class="section-header">
+      <h2 class="section-title" data-uk="Наші підопічні" data-en="Our pets">Наші підопічні</h2>
+      <p class="section-subtitle" data-uk="Познайомтесь з тваринами, які шукають сім'ю" data-en="Meet the animals looking for a family">
+        Познайомтесь з тваринами, які шукають сім'ю
+      </p>
+    </div>
+
+    <div class="animals-grid">
+      <div class="animal-category">
+        <div class="category-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+          <span class="category-emoji">🐕</span>
+        </div>
+        <div class="category-content">
+          <h3 class="category-title" data-uk="Собаки" data-en="Dogs">Собаки</h3>
+          <p class="category-count" data-uk="48 собак" data-en="48 dogs">48 собак</p>
+          <p class="category-desc" data-uk="Від маленьких до великих, всі вакциновані та стерилізовані" data-en="From small to large, all vaccinated and sterilized">
+            Від маленьких до великих, всі вакциновані та стерилізовані
+          </p>
+          <button class="category-btn" data-uk="Дивитись всіх" data-en="View all">Дивитись всіх</button>
+        </div>
+      </div>
+
+      <div class="animal-category">
+        <div class="category-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+          <span class="category-emoji">🐈</span>
+        </div>
+        <div class="category-content">
+          <h3 class="category-title" data-uk="Кішки" data-en="Cats">Кішки</h3>
+          <p class="category-count" data-uk="27 кішок" data-en="27 cats">27 кішок</p>
+          <p class="category-desc" data-uk="Пухнасті друзі різного віку та характеру" data-en="Fluffy friends of different ages and characters">
+            Пухнасті друзі різного віку та характеру
+          </p>
+          <button class="category-btn" data-uk="Дивитись всіх" data-en="View all">Дивитись всіх</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Видалено старі кущі, додано нові в карусель -->
+<section id="carousel" class="carousel">
+  <div class="carousel-inner">
+    <div class="item active" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/Кущ.png');">
+      <div class="slide-content">
+        <h2 data-uk="Історії успіху" data-en="Success stories">Історії успіху</h2>
+        <p data-uk="Кожен місяць десятки тварин знаходять свої домівки" data-en="Every month dozens of animals find their homes">
+          Кожен місяць десятки тварин знаходять свої домівки
+        </p>
+      </div>
+    </div>
+    <div class="item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/Кущ.png');">
+      <div class="slide-content">
+        <h2 data-uk="Волонтерська допомога" data-en="Volunteer help">Волонтерська допомога</h2>
+        <p data-uk="Станьте частиною нашої команди" data-en="Become part of our team">
+          Станьте частиною нашої команди
+        </p>
+      </div>
+    </div>
+    <div class="item" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/Кущ.png');">
+      <div class="slide-content">
+        <h2 data-uk="Фінансова підтримка" data-en="Financial support">Фінансова підтримка</h2>
+        <p data-uk="Ваш внесок рятує життя" data-en="Your contribution saves lives">
+          Ваш внесок рятує життя
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <button class="control left" aria-label="Попередній слайд">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </button>
+  <button class="control right" aria-label="Наступний слайд">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </button>
+
+  <div class="carousel-indicators">
+    <button class="indicator active" aria-label="Слайд 1"></button>
+    <button class="indicator" aria-label="Слайд 2"></button>
+    <button class="indicator" aria-label="Слайд 3"></button>
+  </div>
+</section>
+
+<!-- Додано декоративні кущі після каруселі -->
+<div class="bushes-decoration">
+  <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0C240 40 480 60 720 50C960 40 1200 20 1440 0V120H0V0Z" fill="#2d5f4d"/>
+  </svg>
+</div>
+
+<footer class="footer" id="contacts">
+  <div class="footer-content">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="img/Logo.jpeg" alt="Лапа Надії" class="footer-logo" />
+        <h3 class="footer-brand-name" data-uk="Лапа Надії" data-en="Paw of Hope">Лапа Надії</h3>
+        <p class="footer-brand-desc" data-uk="Притулок для безпритульних тварин" data-en="Shelter for homeless animals">
+          Притулок для безпритульних тварин
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4 class="footer-heading" data-uk="Навігація" data-en="Navigation">Навігація</h4>
+          <a href="index.html" class="footer-link" data-uk="Головна" data-en="Home">Головна</a>
+          <a href="catalog.html" class="footer-link" data-uk="Каталог" data-en="Catalog">Каталог</a>
+          <a href="dogs.html" class="footer-link" data-uk="Собаки" data-en="Dogs">Собаки</a>
+          <a href="cats.html" class="footer-link" data-uk="Коти" data-en="Cats">Коти</a>
+          <a href="help.html" class="footer-link" data-uk="Допомогти" data-en="Help">Допомогти</a>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading" data-uk="Контакти" data-en="Contact">Контакти</h4>
+          <p class="footer-contact">+380 XX XXX XX XX</p>
+          <p class="footer-contact">info@pawofhope.ua</p>
+          <p class="footer-contact" data-uk="м. Київ, вул. Прикладна 12" data-en="Kyiv, Prykladna St. 12">м. Київ, вул. Прикладна 12</p>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading" data-uk="Соціальні мережі" data-en="Social media">Соціальні мережі</h4>
+          <a href="#" class="footer-link">Facebook</a>
+          <a href="#" class="footer-link">Instagram</a>
+          <a href="#" class="footer-link">Telegram</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-uk="© 2026 Лапа Надії. Всі права захищені." data-en="© 2026 Paw of Hope. All rights reserved.">
+        © 2026 Лапа Надії. Всі права захищені.
+      </p>
+      <div class="footer-legal">
+        <a href="#" class="footer-legal-link" data-uk="Політика конфіденційності" data-en="Privacy Policy">Політика конфіденційності</a>
+        <span class="footer-divider">•</span>
+        <a href="#" class="footer-legal-link" data-uk="Умови використання" data-en="Terms of Use">Умови використання</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

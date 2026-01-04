@@ -1,0 +1,881 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Додано smooth scroll та покращені анімації */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #fafbfc;
+  color: #1a202c;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #e2e8f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic_bezier(0.4, 0, 0.2, 1);
+  padding: 20px 0;
+}
+
+.header.scrolled {
+  padding: 12px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 1);
+}
+
+.header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled .logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a202c;
+  letter-spacing: -0.3px;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled .logo-text {
+  font-size: 16px;
+}
+
+.logo-tagline {
+  font-size: 11px;
+  font-weight: 500;
+  color: #718096;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled .logo-tagline {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu-item {
+  font-size: 15px;
+  font-weight: 500;
+  color: #4a5568;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+  padding: 6px 0;
+}
+
+.menu-item:hover {
+  color: #1a202c;
+}
+
+.menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #2d5f4d;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
+
+/* Додано кнопку підтримки */
+.donate-btn {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #2d5f4d;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+}
+
+.donate-btn:hover {
+  background: #234a3d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(45, 95, 77, 0.3);
+}
+
+.lang-btn {
+  padding: 8px 16px;
+  border: 1.5px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: transparent;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Inter", sans-serif;
+}
+
+.lang-btn:hover {
+  border-color: #2d5f4d;
+  color: #2d5f4d;
+  background: #f0f4f0;
+}
+
+/* Додано стилі для іконки кошика */
+.cart-icon {
+  position: relative;
+  color: #4a5568;
+  text-decoration: none;
+  padding: 6px;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon:hover,
+.cart-icon.active {
+  color: #2d5f4d;
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #2d5f4d;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 120px 32px 60px;
+}
+
+/* Повністю переробленa hero секція */
+/* HERO SECTION */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 120px;
+  padding: 40px 0;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #e6f2ef;
+  color: #2d5f4d;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  animation: slideInLeft 0.6s ease-out 0.2s both;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-title {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 54px;
+  font-weight: 600;
+  color: #1a202c;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #4a5568;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 540px;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 48px;
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+  border: none;
+}
+
+.btn-primary {
+  background: #2d5f4d;
+  color: white;
+  box-shadow: 0 4px 14px rgba(45, 95, 77, 0.2);
+}
+
+.btn-primary:hover {
+  background: #234a3d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 95, 77, 0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: #2d5f4d;
+  border: 2px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+  border-color: #2d5f4d;
+  background: #f7fafc;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #718096;
+  font-weight: 500;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: #e2e8f0;
+}
+
+/* Додано parallax ефект для hero image */
+.hero-image {
+  position: relative;
+  animation: fadeInRight 1s ease-out 0.4s both;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.image-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: bounceIn 1s ease-out 1s both;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.badge-icon {
+  font-size: 28px;
+}
+
+.badge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.badge-number {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1;
+}
+
+.badge-desc {
+  font-size: 12px;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* Додано нові секції */
+/* FEATURES SECTION */
+.features-section {
+  margin-bottom: 120px;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Покращені ховер ефекти для карток */
+.feature-card {
+  background: white;
+  padding: 36px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.feature-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.feature-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.feature-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  border-color: #2d5f4d;
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  background: #e6f2ef;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2d5f4d;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  background: #2d5f4d;
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 12px;
+}
+
+.feature-desc {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+/* ANIMALS SECTION */
+.animals-section {
+  margin-bottom: 120px;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+/* Покращена анімація для категорій тварин */
+.animals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+}
+
+.animal-category {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: scaleIn 0.6s ease-out both;
+}
+
+.animal-category:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.animal-category:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animal-category:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-color: transparent;
+}
+
+.category-image {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.animal-category:hover .category-image {
+  transform: scale(1.1);
+}
+
+.category-emoji {
+  font-size: 80px;
+  transition: all 0.4s ease;
+}
+
+.animal-category:hover .category-emoji {
+  transform: rotate(10deg) scale(1.2);
+}
+
+.category-content {
+  padding: 32px;
+}
+
+.category-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 8px;
+}
+
+.category-count {
+  font-size: 14px;
+  color: #718096;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.category-desc {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.category-btn {
+  padding: 12px 24px;
+  background: #f7fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d5f4d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+}
+
+.category-btn:hover {
+  background: #2d5f4d;
+  color: white;
+  border-color: #2d5f4d;
+}
+
+/* Оновлено декорацію кущів */
+/* BUSHES DECORATION */
+.bushes-decoration {
+  margin-top: -2px;
+  background: #2d5f4d;
+  padding-bottom: 60px;
+}
+
+.bushes-decoration svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* FOOTER */
+/* Покращений footer з анімацією */
+.footer {
+  background: #1a202c;
+  color: #cbd5e0;
+  padding: 60px 0 32px;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footer-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 80px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #2d3748;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.footer-brand-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-brand-desc {
+  font-size: 14px;
+  color: #a0aec0;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.footer-link {
+  font-size: 15px;
+  color: #a0aec0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: #2d5f4d;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white;
+  transform: translateX(4px);
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+.footer-contact {
+  font-size: 15px;
+  color: #a0aec0;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: #718096;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-legal-link {
+  font-size: 14px;
+  color: #718096;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-link:hover {
+  color: #cbd5e0;
+}
+
+.footer-divider {
+  color: #4a5568;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .hero-title {
+    font-size: 44px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 20px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .main-content {
+    padding: 100px 20px 40px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .animals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

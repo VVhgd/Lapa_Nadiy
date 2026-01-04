@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Допоможіть притулку Лапа Надії" />
+  <title>Допомогти - Лапа Надії</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/help.css" />
+</head>
+<body>
+
+<header id="mainHeader" class="header">
+  <div class="header-content">
+    <div class="logo-section">
+      <img src="img/Logo.jpeg" alt="Лапа Надії Логотип" class="logo-img" />
+      <div class="logo-text-wrapper">
+        <span class="logo-text" data-uk="Лапа Надії" data-en="Paw of Hope">Лапа Надії</span>
+        <span class="logo-tagline" data-uk="Допомагаємо знайти дім" data-en="Helping find homes">Допомагаємо знайти дім</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html" class="menu-item" data-uk="Головна" data-en="Home">Головна</a>
+      <a href="catalog.html" class="menu-item" data-uk="Каталог" data-en="Catalog">Каталог</a>
+      <a href="dogs.html" class="menu-item" data-uk="Собаки" data-en="Dogs">Собаки</a>
+      <a href="cats.html" class="menu-item" data-uk="Коти" data-en="Cats">Коти</a>
+      <a href="help.html" class="menu-item active" data-uk="Допомогти" data-en="Help">Допомогти</a>
+      <a href="cart.html" class="cart-icon" aria-label="Кошик">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="lang-btn" id="langToggle">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main class="main-content">
+  <section class="help-hero">
+    <h1 class="page-title" data-uk="Як ви можете допомогти" data-en="How You Can Help">Як ви можете допомогти</h1>
+    <p class="page-subtitle" data-uk="Кожна допомога має значення для наших підопічних" data-en="Every help matters for our pets">
+      Кожна допомога має значення для наших підопічних
+    </p>
+  </section>
+
+  <section class="help-ways">
+    <div class="help-card featured">
+      <div class="help-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 1v22"></path>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+      </div>
+      <h2 class="help-title" data-uk="Фінансова підтримка" data-en="Financial Support">Фінансова підтримка</h2>
+      <p class="help-desc" data-uk="Ваш внесок допомагає забезпечити тварин їжею, ветеринарною допомогою та комфортними умовами" data-en="Your contribution helps provide animals with food, veterinary care and comfortable conditions">
+        Ваш внесок допомагає забезпечити тварин їжею, ветеринарною допомогою та комфортними умовами
+      </p>
+      
+      <div class="donation-amounts">
+        <button class="amount-btn" data-amount="100">100 грн</button>
+        <button class="amount-btn" data-amount="300">300 грн</button>
+        <button class="amount-btn" data-amount="500">500 грн</button>
+        <button class="amount-btn" data-amount="1000">1000 грн</button>
+      </div>
+      
+      <input type="number" class="custom-amount" placeholder="Інша сума" data-uk-placeholder="Інша сума" data-en-placeholder="Custom amount" />
+      
+      <button class="donate-btn-large" data-uk="Зробити внесок" data-en="Make a Donation">Зробити внесок</button>
+      
+      <div class="payment-methods">
+        <span class="payment-label" data-uk="Приймаємо:" data-en="We accept:">Приймаємо:</span>
+        <span class="payment-badge">💳 Visa</span>
+        <span class="payment-badge">💳 Mastercard</span>
+        <span class="payment-badge">💰 PayPal</span>
+      </div>
+    </div>
+
+    <div class="help-options">
+      <div class="help-option-card">
+        <div class="help-option-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h3 class="help-option-title" data-uk="Стати волонтером" data-en="Become a Volunteer">Стати волонтером</h3>
+        <p class="help-option-desc" data-uk="Допомагайте доглядати за тваринами, вигулювати собак або допомагайте в організаційних питаннях" data-en="Help care for animals, walk dogs or assist with organizational matters">
+          Допомагайте доглядати за тваринами, вигулювати собак або допомагайте в організаційних питаннях
+        </p>
+        <button class="help-option-btn" data-uk="Дізнатись більше" data-en="Learn More">Дізнатись більше</button>
+      </div>
+
+      <div class="help-option-card">
+        <div class="help-option-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </div>
+        <h3 class="help-option-title" data-uk="Усиновіть тварину" data-en="Adopt an Animal">Усиновіть тварину</h3>
+        <p class="help-option-desc" data-uk="Подаруйте дім тварині, яка шукає люблячу родину" data-en="Give a home to an animal looking for a loving family">
+          Подаруйте дім тварині, яка шукає люблячу родину
+        </p>
+        <a href="catalog.html" class="help-option-btn" data-uk="Переглянути каталог" data-en="View Catalog">Переглянути каталог</a>
+      </div>
+
+      <div class="help-option-card">
+        <div class="help-option-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path>
+            <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"></path>
+            <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"></path>
+          </svg>
+        </div>
+        <h3 class="help-option-title" data-uk="Матеріальна допомога" data-en="Material Assistance">Матеріальна допомога</h3>
+        <p class="help-option-desc" data-uk="Передайте корм, іграшки, підстилки або інші необхідні речі" data-en="Donate food, toys, bedding or other necessary items">
+          Передайте корм, іграшки, підстилки або інші необхідні речі
+        </p>
+        <button class="help-option-btn" data-uk="Список потреб" data-en="Needs List">Список потреб</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact-section">
+    <h2 class="section-title" data-uk="Ваш вплив" data-en="Your Impact">Ваш вплив</h2>
+    <p class="section-subtitle" data-uk="Подивіться, як ваші внески змінюють життя тварин" data-en="See how your contributions change the lives of animals">
+      Подивіться, як ваші внески змінюють життя тварин
+    </p>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-amount">100 грн</div>
+        <div class="impact-text" data-uk="Забезпечує тварину якісним кормом на тиждень" data-en="Provides an animal with quality food for a week">
+          Забезпечує тварину якісним кормом на тиждень
+        </div>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-amount">300 грн</div>
+        <div class="impact-text" data-uk="Оплачує базовий ветеринарний огляд" data-en="Pays for a basic veterinary examination">
+          Оплачує базовий ветеринарний огляд
+        </div>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-amount">500 грн</div>
+        <div class="impact-text" data-uk="Покриває вакцинацію та стерилізацію" data-en="Covers vaccination and sterilization">
+          Покриває вакцинацію та стерилізацію
+        </div>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-amount">1000 грн</div>
+        <div class="impact-text" data-uk="Забезпечує повний місяць догляду за твариною" data-en="Provides a full month of animal care">
+          Забезпечує повний місяць догляду за твариною
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="img/Logo.jpeg" alt="Лапа Надії" class="footer-logo" />
+        <h3 class="footer-brand-name" data-uk="Лапа Надії" data-en="Paw of Hope">Лапа Надії</h3>
+        <p class="footer-brand-desc" data-uk="Притулок для безпритульних тварин" data-en="Shelter for homeless animals">
+          Притулок для безпритульних тварин
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4 class="footer-heading" data-uk="Навігація" data-en="Navigation">Навігація</h4>
+          <a href="index.html" class="footer-link" data-uk="Головна" data-en="Home">Головна</a>
+          <a href="catalog.html" class="footer-link" data-uk="Каталог" data-en="Catalog">Каталог</a>
+          <a href="help.html" class="footer-link" data-uk="Допомогти" data-en="Help">Допомогти</a>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading" data-uk="Контакти" data-en="Contact">Контакти</h4>
+          <p class="footer-contact">+380 XX XXX XX XX</p>
+          <p class="footer-contact">info@pawofhope.ua</p>
+          <p class="footer-contact" data-uk="м. Київ, вул. Прикладна 12" data-en="Kyiv, Prykladna St. 12">м. Київ, вул. Прикладна 12</p>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading" data-uk="Соціальні мережі" data-en="Social media">Соціальні мережі</h4>
+          <a href="#" class="footer-link">Facebook</a>
+          <a href="#" class="footer-link">Instagram</a>
+          <a href="#" class="footer-link">Telegram</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-uk="© 2026 Лапа Надії. Всі права захищені." data-en="© 2026 Paw of Hope. All rights reserved.">
+        © 2026 Лапа Надії. Всі права захищені.
+      </p>
+      <div class="footer-legal">
+        <a href="#" class="footer-legal-link" data-uk="Політика конфіденційності" data-en="Privacy Policy">Політика конфіденційності</a>
+        <span class="footer-divider">•</span>
+        <a href="#" class="footer-legal-link" data-uk="Умови використання" data-en="Terms of Use">Умови використання</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/help.js"></script>
+
+</body>
+</html>

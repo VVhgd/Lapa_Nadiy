@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Коти в притулку Лапа Надії" />
+  <title>Коти - Лапа Надії</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/catalog.css" />
+</head>
+<body>
+
+<header id="mainHeader" class="header">
+  <div class="header-content">
+    <div class="logo-section">
+      <img src="img/Logo.jpeg" alt="Лапа Надії Логотип" class="logo-img" />
+      <div class="logo-text-wrapper">
+        <span class="logo-text" data-uk="Лапа Надії" data-en="Paw of Hope">Лапа Надії</span>
+        <span class="logo-tagline" data-uk="Допомагаємо знайти дім" data-en="Helping find homes">Допомагаємо знайти дім</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html" class="menu-item" data-uk="Головна" data-en="Home">Головна</a>
+      <a href="catalog.html" class="menu-item" data-uk="Каталог" data-en="Catalog">Каталог</a>
+      <a href="dogs.html" class="menu-item" data-uk="Собаки" data-en="Dogs">Собаки</a>
+      <a href="cats.html" class="menu-item active" data-uk="Коти" data-en="Cats">Коти</a>
+      <a href="help.html" class="menu-item" data-uk="Допомогти" data-en="Help">Допомогти</a>
+      <a href="cart.html" class="cart-icon" aria-label="Кошик">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="lang-btn" id="langToggle">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main class="main-content">
+  <section class="catalog-hero" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+    <h1 class="page-title" data-uk="Наші коти" data-en="Our Cats">Наші коти</h1>
+    <p class="page-subtitle" data-uk="27 котів різного віку та характеру шукають сім'ю" data-en="27 cats of different ages and personalities are looking for a family">
+      27 котів різного віку та характеру шукають сім'ю
+    </p>
+  </section>
+
+  <section class="filters-section">
+    <div class="filters-wrapper">
+      <div class="filter-group">
+        <label class="filter-label" data-uk="Вік" data-en="Age">Вік</label>
+        <select class="filter-select" id="ageFilter">
+          <option value="all" data-uk="Всі" data-en="All">Всі</option>
+          <option value="kitten" data-uk="Кошеня" data-en="Kitten">Кошеня</option>
+          <option value="young" data-uk="Молодий" data-en="Young">Молодий</option>
+          <option value="adult" data-uk="Дорослий" data-en="Adult">Дорослий</option>
+        </select>
+      </div>
+
+      <button class="filter-reset" id="resetFilters" data-uk="Скинути" data-en="Reset">Скинути</button>
+    </div>
+  </section>
+
+  <section class="animals-grid-section">
+    <div class="animals-grid" id="animalsGrid">
+      <!-- Будуть додані через JavaScript -->
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="img/Logo.jpeg" alt="Лапа Надії" class="footer-logo" />
+        <h3 class="footer-brand-name" data-uk="Лапа Надії" data-en="Paw of Hope">Лапа Надії</h3>
+        <p class="footer-brand-desc" data-uk="Притулок для безпритульних тварин" data-en="Shelter for homeless animals">
+          Притулок для безпритульних тварин
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4 class="footer-heading" data-uk="Навігація" data-en="Navigation">Навігація</h4>
+          <a href="index.html" class="footer-link" data-uk="Головна" data-en="Home">Головна</a>
+          <a href="catalog.html" class="footer-link" data-uk="Каталог" data-en="Catalog">Каталог</a>
+          <a href="help.html" class="footer-link" data-uk="Допомогти" data-en="Help">Допомогти</a>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading" data-uk="Контакти" data-en="Contact">Контакти</h4>
+          <p class="footer-contact">+380 XX XXX XX XX</p>
+          <p class="footer-contact">info@pawofhope.ua</p>
+          <p class="footer-contact" data-uk="м. Київ, вул. Прикладна 12" data-en="Kyiv, Prykladna St. 12">м. Київ, вул. Прикладна 12</p>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading" data-uk="Соціальні мережі" data-en="Social media">Соціальні мережі</h4>
+          <a href="#" class="footer-link">Facebook</a>
+          <a href="#" class="footer-link">Instagram</a>
+          <a href="#" class="footer-link">Telegram</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-uk="© 2026 Лапа Надії. Всі права захищені." data-en="© 2026 Paw of Hope. All rights reserved.">
+        © 2026 Лапа Надії. Всі права захищені.
+      </p>
+      <div class="footer-legal">
+        <a href="#" class="footer-legal-link" data-uk="Політика конфіденційності" data-en="Privacy Policy">Політика конфіденційності</a>
+        <span class="footer-divider">•</span>
+        <a href="#" class="footer-legal-link" data-uk="Умови використання" data-en="Terms of Use">Умови використання</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/cats.js"></script>
+
+</body>
+</html>
