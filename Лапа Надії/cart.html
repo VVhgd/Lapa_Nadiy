@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Кошик</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header">
+  <h2>Ваш кошик 🐾</h2>
+</header>
+
+<main class="cart-page">
+  <div id="cartItems" class="cart-items"></div>
+
+  <div class="cart-summary">
+    <p>Разом: <span id="total">0 грн</span></p>
+    <button onclick="clearCart()" class="btn-clear">Очистити кошик</button>
+  </div>
+</main>
+
+<script src="js/cart.js"></script>
+</body>
+</html>

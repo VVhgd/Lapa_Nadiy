@@ -1,70 +1,178 @@
-/* Кущі під каруселлю */
+/* CAROUSEL STYLES */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 600px;
+  margin: 60px auto;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel .item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Simple white line arrows */
+.carousel .control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  transition: opacity 0.3s ease;
+  opacity: 0.7;
+}
+
+.carousel .control:hover {
+  opacity: 1;
+}
+
+/* White arrow lines using pseudo-elements */
+.carousel .control::before,
+.carousel .control::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 30px;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel .control.left {
+  left: 30px;
+}
+
+.carousel .control.left::before {
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.carousel .control.left::after {
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.carousel .control.right {
+  right: 30px;
+}
+
+.carousel .control.right::before {
+  top: 15px;
+  right: 50%;
+  transform: translateX(50%) rotate(45deg);
+}
+
+.carousel .control.right::after {
+  bottom: 15px;
+  right: 50%;
+  transform: translateX(50%) rotate(-45deg);
+}
+
+/* Added carousel indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.carousel-indicators .indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators .indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.carousel-indicators .indicator.active {
+  background-color: white;
+  width: 32px;
+  border-radius: 6px;
+}
+
+/* BUSHES DECORATION */
 .bushes {
-    height: 80px;
-    background: #4f7f6a;
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px;
-  }
-  
-  /* Карусель */
+  width: 100%;
+  height: 60px;
+  background-color: #5a8f7b;
+  border-radius: 50% 50% 0 0 / 30px 30px 0 0;
+  margin-top: -30px;
+  position: relative;
+  z-index: 5;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
   .carousel {
-    position: relative;
-    height: 500px;
-    overflow: hidden;
-    background: #fff;
+    height: 400px;
+    margin: 40px 20px;
   }
-  
-  .carousel-inner {
-    height: 100%;
-    position: relative;
+
+  .carousel .control {
+    width: 40px;
+    height: 40px;
   }
-  
-  .item {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 1s ease;
+
+  .carousel .control::before,
+  .carousel .control::after {
+    width: 2px;
+    height: 20px;
   }
-  
-  .item.active {
-    opacity: 1;
+
+  .carousel .control.left {
+    left: 15px;
   }
-  
-  /* Слайди */
-  .item:nth-child(1) {
-    background-image: url(/img/Carousel1.jpg);
-    height: 500px;
+
+  .carousel .control.right {
+    right: 15px;
   }
-  
-  .item:nth-child(2) {
-    background-image: url(/img/Carousel2.jpg);
-    height: 500px;
+
+  .carousel-indicators {
+    bottom: 15px;
   }
-  
-  .item:nth-child(3) {
-    background-image: url(/img/Carousel3.jpg);
-    height: 500px;
+
+  .carousel-indicators .indicator {
+    width: 10px;
+    height: 10px;
   }
-  
-  /* Контролі */
-  .control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: black;
-    user-select: none;
-    z-index: 2;
+
+  .carousel-indicators .indicator.active {
+    width: 24px;
   }
-  
-  .control.left {
-    left: 20px;
-  }
-  
-  .control.right {
-    right: 20px;
-  }
-  
+}

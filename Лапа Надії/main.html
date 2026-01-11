@@ -8,59 +8,133 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Kurale&family=Lobster&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet" />
 
-  <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/carousel.css" />
 </head>
+<script src="js/cart.js"></script>
+
 <body>
 
 <header>
   <img src="img/Logo.jpeg" alt="Лапа Надії" />
-
   <nav class="menu">
-    <h1>Новини</h1>
-    <h1>Контакти</h1>
-    <h1>Усиновити</h1>
-    <h1>Кошик</h1>
-    <h1 class="lang">EN</h1>
+    <a href="news.html">Новини</a>
+    <a href="katalog.html">Усиновити</a>
+    <a href="cart.html">Кошик</a>
+    <span class="lang">EN</span>
   </nav>
 </header>
 
-<main class="parent">
-  <div class="div1">
+<main>
+  <!-- Що нового -->
+  <section class="news-update">
     <h1>Що нового у притулку?</h1>
-  </div>
-
-  <div class="div2">
+    <p>Притулок отримав нові вольєри та відвідав 12 нових тварин. Наші волонтери активно дбають про них щодня.</p>
     <img src="img/Лапи.png" alt="Лапи" />
-  </div>
+  </section>
 
-  <div class="div3"></div>
-  <div class="div4"><p></p></div>
+  <!-- Тварини для усиновлення -->
+  <section class="adopt-now">
+    <h2>Тварини для усиновлення</h2>
+    <div class="adopt-cards">
+      <div class="animal-card">
+        <img src="img/dog1.jpg" alt="Собака Макс" />
+        <h3>Макс</h3>
+        <p>6 років, спокійний та добрий</p>
+        <button>Усиновити</button>
+      </div>
+      <div class="animal-card">
+        <img src="img/Мурчик.webp" alt="Кіт Мурчик" />
+        <h3>Мурчик</h3>
+        <p>3 роки, лагідний та грайливий</p>
+        <button>Усиновити</button>
+      </div>
+    </div>
+  </section>
 
-  <div class="div5">
-    <img src="img/Clever.avif" alt="Листочок" />
-  </div>
+  <!-- Історії успіху -->
+  <section class="success-stories">
+    <h2>Історії щасливих усиновлень</h2>
+    <div class="story-cards">
+      <div class="story-card">
+        <img src="img/dog2.jpg" alt="Собака Боббі" />
+        <p>Боббі тепер щасливий у новій родині.</p>
+      </div>
+      <div class="story-card">
+        <img src="img/Cat2.webp" alt="Кіт Сніжок" />
+        <p>Сніжок насолоджується життям разом з дітьми.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Як допомогти -->
+  <section class="help-us">
+    <h2>Як допомогти</h2>
+    <div class="help-cards">
+      <div class="card">
+        <h3>Волонтерство</h3>
+        <p>Допомога в догляді за тваринами.</p>
+      </div>
+      <div class="card">
+        <h3>Пожертви</h3>
+        <p>Фінансова підтримка притулку.</p>
+      </div>
+      <div class="card">
+        <h3>Корм та речі</h3>
+        <p>Передача корму, іграшок, ковдр.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Поширені запитання</h2>
+    <div class="faq-item">
+      <h3>Як усиновити тварину?</h3>
+      <p>Заповніть форму на сайті, ми зв’яжемося з вами.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Чи можна відвідати притулок?</h3>
+      <p>Так! Щомісяця проводимо дні відкритих дверей.</p>
+    </div>
+  </section>
 </main>
 
-<!-- 🌿 Кущі під каруселлю -->
-<div class="bushes"></div>
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="img/Logo.jpeg" alt="Лапа Надії" />
+      <h3>Лапа Надії</h3>
+      <p>Притулок для безпритульних тварин</p>
+    </div>
 
-<!-- 🎠 Карусель -->
-<div id="carousel" class="carousel">
-  <div class="carousel-inner">
-    <div class="item active"></div>
-    <div class="item"></div>
-    <div class="item"></div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Навігація</h4>
+        <a href="main.html">Головна</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="help.html">Допомогти</a>
+        <a href="news.html">Новини</a>
+      </div>
+      <div class="footer-column">
+        <h4>Контакти</h4>
+        <p>+380 XX XXX XX XX</p>
+        <p>info@pawofhope.ua</p>
+        <p>м. Київ, вул. Прикладна 12</p>
+      </div>
+      <div class="footer-column">
+        <h4>Соціальні мережі</h4>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
   </div>
-
-  <button class="control left">&#10094;</button>
-  <button class="control right">&#10095;</button>
-</div>
-
-<script src="js/carousel.js"></script>
+  <div class="footer-bottom">
+    <p>© 2026 Лапа Надії. Всі права захищені.</p>
+  </div>
+</footer>
 
 </body>
 </html>

@@ -5,15 +5,10 @@
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
 body {
   font-family: 'Kurale', serif;
-  background-color: #e4e4e4;
-  color: #1f2937;
+  background-color: #f8f8f8;
+  color: #2d2d2d;
 }
 
 /* HEADER */
@@ -22,95 +17,303 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 15px 40px;
-  background-color: #f3f0f0;
-  border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d1d1d1;
 }
 
-/* LOGO */
 header img {
   width: 50px;
   height: 50px;
   border-radius: 12px;
 }
 
-/* MENU */
 .menu {
   display: flex;
   align-items: center;
-  gap: 75px;
+  gap: 30px;
 }
 
-.menu h1 {
-  font-size: 20px;
+.menu a {
+  text-decoration: none;
+  color: #2d2d2d;
   font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
-.menu h1:hover {
-  color: #2f8f7a;
-  transform: translateY(-2px);
+.menu a:hover {
+  color: #557a63;
 }
 
-/* EN BUTTON */
 .menu .lang {
-  padding: 6px 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 20px;
-  font-size: 15px;
-  background-color: #fff;
+  font-size: 14px;
+  color: #2d2d2d;
+  cursor: pointer;
 }
 
-.menu .lang:hover {
-  background-color: #2f8f7a;
-  color: #fff;
-  border-color: #2f8f7a;
+/* SECTIONS */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* GRID */
-.parent {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, auto);
-  width: 100%;
+section {
+  margin-bottom: 60px;
 }
 
-/* GRID AREAS */
-.div1 {
-  grid-area: 1 / 1 / 3 / 3;
-  padding: 40px;
+h1, h2 {
+  color: #557a63;
+  margin-bottom: 15px;
 }
 
-.div1 h1 {
-  margin: 0;
+p {
+  color: #4a4a4a;
+  line-height: 1.6;
 }
 
-.div2 {
-  grid-area: 3 / 1 / 4 / 6;
-}
-
-.div2 img {
-  display: block;
-  width: 100%;
-  margin: 0;
-}
-
-.div3 {
-  grid-area: 4 / 1 / 6 / 6;
-}
-
-.div4 {
-  grid-area: 4 / 2 / 5 / 5;
-}
-
-.div5 {
-  grid-area: 5 / 5 / 6 / 6;
+/* CARDS */
+.adopt-cards, .story-cards, .help-cards {
   display: flex;
-  justify-content: flex-end;
-  padding: 20px;
+  flex-wrap: wrap;
+  gap: 20px;;
 }
 
-.div5 img {
-  width: 70px;
-  border-radius: 35px;
+.animal-card, .story-card, .card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 280px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
+
+.animal-card img, .story-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.animal-card button, .card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #557a63;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.animal-card button:hover, .card button:hover {
+  background-color: #3f5a4a;
+}
+
+/* FAQ */
+.faq-item {
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #161616;
+  color: #c5c4c4;
+  padding: 40px 20px;
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-brand img {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  flex: 2 1 400px;
+  display: flex;
+  gap: 40px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.footer-column a, .footer-column p {
+  color: #949393;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+  color: #557a63;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #7a7a7a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .adopt-cards, .story-cards, .help-cards {
+    flex-direction: column;
+  }
+}
+/* ---------- УНІФІКАЦІЯ ЗОБРАЖЕНЬ ---------- */
+
+/* Для всіх карток з тваринами та історій */
+.animal-card img,
+.story-card img {
+  width: 100%;
+  height: 220px;          /* всі фото однієї висоти */
+  object-fit: cover;     /* не розтягує, а красиво обрізає */
+  border-radius: 10px;
+  display: block;
+}
+
+/* Для великих банерних зображень */
+.news-update img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Для логотипів */
+header img,
+.footer-brand img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.adopt-cards,
+.story-cards,
+.help-cards,
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+section {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 40px;
+  }
+
+  h1 { font-size: 28px; }
+  h2 { font-size: 22px; }
+}
+@media (max-width: 800px) {
+  .footer-main {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    gap: 10px;
+  }
+}
+/* ===== КОШИК ===== */
+
+.cart-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-item {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.05);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cart-item h4 {
+  margin: 0 0 5px;
+}
+
+.cart-item button {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cart-summary {
+  margin-top: 25px;
+  text-align: right;
+}
+
+.btn-clear {
+  margin-top: 10px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #c0392b;
+  color: #fff;
+  cursor: pointer;
+}
+/* HERO SMALL */
+.small-hero { min-height:200px; display:flex; align-items:center; background:#dbeaf1; }
+.small-hero .hero-content { background: rgba(255,255,255,0.85); padding:20px; border-radius:12px; text-align:center; }
+
+/* NEWS CARDS */
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:24px; margin-top:30px; }
+.card { background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,.05); padding:16px; }
+.card img { width:100%; height:180px; object-fit:cover; border-radius:12px; }
+.card h3 { margin:12px 0 8px; font-size:20px; }
+.card p { font-size:14px; color:#4a4a4a; line-height:1.5; }
